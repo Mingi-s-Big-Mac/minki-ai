@@ -29,6 +29,7 @@ def get_llm(model: str, temperature: float = 0.3) -> BaseChatModel:
         return ChatBedrockConverse(
             model=model,
             temperature=temperature,
+            max_tokens=settings.max_tokens,
             **_bedrock_credentials(),
         )
 

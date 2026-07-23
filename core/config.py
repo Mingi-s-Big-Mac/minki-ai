@@ -13,6 +13,9 @@ class Settings(BaseSettings):
     chat_model: str = "eu.anthropic.claude-haiku-4-5-20251001-v1:0"
     roadmap_model: str = "eu.anthropic.claude-sonnet-4-5-20250929-v1:0"
 
+    # 응답 최대 출력 토큰. 답변이 중간에 잘리면 이 값을 늘리세요.
+    max_tokens: int = 8192
+
     # 임베딩
     embedding_provider: str = "bedrock"       # "bedrock" | "huggingface" | "ollama"
     embedding_model: str = "amazon.titan-embed-text-v2:0"
